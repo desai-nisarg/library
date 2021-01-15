@@ -1,97 +1,17 @@
-Exploring Egyptian Fruit Bat Vocalizations:
-===
-This repository can serve as a brief introduction to working with the [Egyptian fruit bat datasets](https://www.nature.com/articles/sdata2017143). The full dataset contains ~300k vocalization samples,
-~90k of which are annotated. 
+# Egyptian Fruit Bat
 
-* In the script `efb_context_labeler.ipynb`, we train a resnet model to predict
-the context of a vocalization interaction from a subset of the annotated dataset. 
+![The Egyptian Fruit Bat](https://upload.wikimedia.org/wikipedia/commons/4/4c/Skraidantis_egipto_%C5%A1uo_%28cropped%29.jpg)
 
-* The scripts `bat_spectrogram_tuner.ipynb` and `rainbow-ification_exploration.ipynb` demonstrate some methods of representing audio signals as images in the context of machine learning.
+The Egyptian fruit bat or Egyptian rousette (Rousettus aegyptiacus) is a species of megabat that is found in Africa, the Middle East, the Mediterranean, and the Indian subcontinent.
 
-* The file `relevant_file_info.zip` contains the metadata, annotations, and file information for the vocalization data should anyone need it.
+Egyptian fruit bats are social mammals which use rich vocal communication, and have been found to possess the capability of vocal learning. They are social animals who nearly exclusively interact with each other in the dark using versatile vocal skills. This makes them particularly interesting for bioacoustic research.
 
-* The script `bat_file_handler_sandbox.py` is the sandbox of functions and processes used to disperse the larger dataset into smaller chunks.
+Egyptian fruit bats live in colonies of dozens to thousands and may live to the age of 25 or more.
 
-The Data:
-===
-The original bat vocalization data was recorded and labeled by [Yossi Yovel](http://www.yossiyovel.com/index.php/publications) and his team. This data set must have taken an incredible amount of work, with 300k unique vocalizations recorded and 90k labeled annotations, and we are so thankful to be able to use it! You can view the original paper publishing the data [here](https://www.nature.com/articles/sdata2017143). 
+## Dataset information
 
-The data are split up into three lumps, one set containing everything from the source, another containing just the annotations, and another containing a small subset of the annotated data. The larger two datasets are quite large even in a zipped archive format (so be prepared to wait!) and have to be accessed using 7zip (since the files were 7zipped from the Figshare source). The script `efb_context_labeler.ipynb` shows how to download the data locally using `wget` and `7z`. 
+This dataset has been shared by Yossi Yovel et al. as part of the [An annotated dataset of Egyptian fruit bat vocalizations across varying contexts and during vocal ontogenyAn annotated dataset of Egyptian fruit bat vocalizations across varying contexts and during vocal ontogeny](https://www.nature.com/articles/sdata2017143) paper.
 
-1. The full vocalization dataset can be found [here](https://archive.org/details/egyptian_fruit_bat) (~200 GiB unzipped)
+The dataset includes almost 300,000 files, a few seconds each, containing social vocalizations and representing the complete vocal repertoire used by the bats. Around 90,000 files are annotated with details about the individuals involved in the vocal interactions, their behaviours and the context. Moreover, the data include the complete vocal ontogeny of pups, from birth to adulthood, in different conditions (e.g., isolated or in a group).
 
-2. The full set of annotated vocalizations can be found [here](https://archive.org/details/egyptian_fruit_bat_annotated) (~125 GiB unzipped)
-
-3. A "tiny" subset of the annotated vocalizations can be found [here](https://archive.org/details/egyptian_fruit_bat_annotated_tiny) (~10 GiB unzipped)
-
-All of the subsets of the original data are split up in the same way:
-```
-Egyptian_fruit_bat_unzipped
-├── Annotations.csv
-├── better_annotations.csv
-├── FileInfo.csv
-├── files101/
-├── files102/
-├── files103/
-├── files104/
-├── files105/
-├── files106/
-├── files201/
-├── files202/
-├── files203/
-├── files204/
-├── files205/
-├── files206/
-├── files207/
-├── files208/
-├── files209/
-├── files210/
-├── files211/
-├── files212/
-├── files213/
-├── files214/
-├── files215/
-├── files216/
-├── files217/
-├── files218/
-├── files219/
-├── files220/
-├── files221/
-├── files222/
-├── files223/
-└── files224/
-```
-
-The directories `files###` are where the WAV-type audio vocalizations are stored, and the csv's are where the file info and annotations can be found. The file `better_annotations.csv` does not actually make the annotations any better than they already are, it simply joins the information contained in the original `Annotations.csv` with the file information in `FileInfo.csv`. (Joining the file ID and annotations for each file with the file name and path so that we can more easily grab the annotations for each file) 
-
-> Prat, Yosef; Taub, Mor; Pratt, Ester; Yovel, Yossi (2017): An annotated dataset of Egyptian fruit bat vocalizations across varying contexts and during vocal ontogeny. figshare. Collection. https://doi.org/10.6084/m9.figshare.c.3666502.v2
-
-Explorations:
-===
-The Egyptian fruit bat datasets record interactions between bats located in isolation chambers. The vocalizations typically occur between two bats, one labeled as the `emitter` and the other the `receiver`, and the labels for the vocalization samples were observed/generated from synchronized video recordings (You can peruse the metadata [here](https://ia903204.us.archive.org/view_archive.php?archive=/19/items/egyptian_fruit_bat_annotated/egyptian_fruit_bat_annotated.zip&file=Metadata.pdf)). The notebook `efb_context_labeler.ipynb` attempts to characterize the "context" of a bat vocalization by studying the visual structure of the audio signal recorded during an interaction. Below is the "context" class label distribution for the `egyptian_fruit_bat_annotated_tiny` dataset: 
-
-![alt text](https://github.com/oliver-adams-b/library/blob/main/egyptian_fruit_bat/images/class_dist_in_tiny.png)
-
-The class labels counts / datasample counts for the tiny annotated dataset were augmented so there is more of an even distribution of labels. In the full annotated dataset, however, the class label distribution is greatly skewed with nearly 60% of class label counts being either `sleeping` or `feeding`. The audio signals were augmented using the [CQ transform](https://en.wikipedia.org/wiki/Constant-Q_transform) and some simple time-color encoding, more information on the data augmentation and the thought that went into it can be found in the notebooks `bat_spectrogram_tuner.ipynb` and `rainbow-ification_exploration.ipynb`. Below is what a few vocalization samples look like before they are fed into the model: 
-
-![alt text](https://github.com/oliver-adams-b/library/blob/main/egyptian_fruit_bat/images/batch_context_w_rainbows.png)
-
-Results:
-===
-Training on the rainbow-ified CQ-transformed vocalization signals, a pretrained `resnet34`fastai model achieved 55% accuracy on predicting the context classes shown above. Below is the model performance over 12 epochs:
-
-![alt text](https://github.com/oliver-adams-b/library/blob/main/egyptian_fruit_bat/images/efbresnet34_training.png)
-
-Some overfitting occurs near the end of training, and some more care could be taken here to prevent this. The model performs quite well on some classes over others, as you can see from the confusion matrix below:
-
-![alt text](https://github.com/oliver-adams-b/library/blob/main/egyptian_fruit_bat/images/conf_matrix.png)
-
-Some labels like "grooming" or "kissing" are the hardest for the model to predict, and the ambiguity between some labels like "fighting" versus "biting" are obvious roadblocks. Further work will be done soon to study the clustering of bat vocalizations using GANs and tsne plots!
-
-Potential Next Steps:
-===
-* Some work could be done to mitigate the regularization of the model to improve model performance. For example: working with different subsets of the data, changing model architecture, or exploring different avenues of data augmentation. 
-
-* In the research paper found [here](https://www.nature.com/articles/srep39419), a model was trained to predict 4 categories of vocalization context and achieved 50% accuracy, and it might be insightful to attempt to reproduce and potentially improve these results. 
-
-
+The full dataset is available for download [here](https://figshare.com/collections/An_annotated_dataset_of_Egyptian_fruit_bat_vocalizations_across_varying_contexts_and_during_vocal_ontogeny/3666502). We preprocess the annotated subset of the dataset to make it amenable to research using machine learning techniques. This notebook will run you through the preprocessing steps taken as well as outline how to download the preprocessed data.
