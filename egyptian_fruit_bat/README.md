@@ -1,6 +1,6 @@
 # Egyptian Fruit Bat
 
-![The Egyptian Fruit Bat](https://upload.wikimedia.org/wikipedia/commons/4/4c/Skraidantis_egipto_%C5%A1uo_%28cropped%29.jpg)
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Skraidantis_egipto_%C5%A1uo_%28cropped%29.jpg" alt="The Egyptian Fruit Bat" width="200" align="center">
 
 The Egyptian fruit bat or Egyptian rousette (Rousettus aegyptiacus) is a species of megabat that is found in Africa, the Middle East, the Mediterranean, and the Indian subcontinent.
 
