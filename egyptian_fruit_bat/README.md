@@ -10,7 +10,7 @@ Egyptian fruit bats live in colonies of dozens to thousands and may live to the 
 
 ## Dataset information
 
-This dataset has been shared by Yossi Yovel et al. as part of the [An annotated dataset of Egyptian fruit bat vocalizations across varying contexts and during vocal ontogenyAn annotated dataset of Egyptian fruit bat vocalizations across varying contexts and during vocal ontogeny](https://www.nature.com/articles/sdata2017143) paper.
+This dataset has been shared by Yossi Yovel et al. as part of the [An annotated dataset of Egyptian fruit bat vocalizations across varying contexts and during vocal ontogeny](https://www.nature.com/articles/sdata2017143) paper.
 
 The dataset includes almost 300,000 files, a few seconds each, containing social vocalizations and representing the complete vocal repertoire used by the bats. Around 90,000 files are annotated with details about the individuals involved in the vocal interactions, their behaviours and the context. Moreover, the data include the complete vocal ontogeny of pups, from birth to adulthood, in different conditions (e.g., isolated or in a group).
 
