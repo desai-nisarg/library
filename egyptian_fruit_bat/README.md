@@ -10,8 +10,22 @@ Egyptian fruit bats live in colonies of dozens to thousands and may live to the 
 
 ## Dataset information
 
+We provide two datasets - the Egyptian fruit bat dataset, and its mini counterpart.
+
+### The Egyptian fruit bat dataset
+
 The dataset contains 91080 egyptian fruit bat vocalizations recorded at 250 000 Hz. Recordings range in length from 0.02 to 34 seconds. The calls are labeled and include the following information: emitter, addressee, context, emitter re-vocalization action, addressee pre-vocalization action, emitter post-vocalization action, and addressee post-vocalization action. The contains social vocalizations and represents the complete vocal repertoire used by the bats.
 
 The preprocessed dataset can be downloaded from [Internet Archive](https://archive.org/details/egyptian_fruit_bats). Here are the steps we took to preprocess the dataset. Here are the download instructions.
 
-This dataset has been shared by Yossi Yovel et al. as part of the [An annotated dataset of Egyptian fruit bat vocalizations across varying contexts and during vocal ontogeny](https://www.nature.com/articles/sdata2017143) paper. The full dataset is available for download [here](https://figshare.com/collections/An_annotated_dataset_of_Egyptian_fruit_bat_vocalizations_across_varying_contexts_and_during_vocal_ontogeny/3666502) (on top of the labeled portion we provide, it also contains over 200 000 of unnanotated recordings).
+The zip file for this dataset is 55 GB.
+
+### The Egyptian fruit bat dataset - mini
+
+This is a smaller version of the dataset above. It 
+
+The zip file for this dataset is 
+
+### Original, unprocessed dataset
+
+The original dataset has been shared by Yossi Yovel et al. as part of the [An annotated dataset of Egyptian fruit bat vocalizations across varying contexts and during vocal ontogeny](https://www.nature.com/articles/sdata2017143) paper. The full dataset is available for download [here](https://figshare.com/collections/An_annotated_dataset_of_Egyptian_fruit_bat_vocalizations_across_varying_contexts_and_during_vocal_ontogeny/3666502) (on top of the labeled portion we provide, it also contains over 200 000 of unnanotated recordings).
