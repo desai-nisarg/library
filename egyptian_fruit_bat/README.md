@@ -32,4 +32,4 @@ The original dataset has been shared by Yossi Yovel et al. as part of the [An an
 
 #### Citations
 
-[Prat, Yosef; Taub, Mor; Pratt, Ester; Yovel, Yossi (2017): An annotated dataset of Egyptian fruit bat vocalizations across varying contexts and during vocal ontogeny. figshare. Collection.](https://doi.org/10.6084/m9.figshare.c.3666502.v2)
+Prat, Yosef; Taub, Mor; Pratt, Ester; Yovel, Yossi (2017): [An annotated dataset of Egyptian fruit bat vocalizations across varying contexts and during vocal ontogeny. figshare. Collection.](https://doi.org/10.6084/m9.figshare.c.3666502.v2)
