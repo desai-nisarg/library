@@ -29,3 +29,7 @@ The zip file for this dataset is
 ### Original, unprocessed dataset
 
 The original dataset has been shared by Yossi Yovel et al. as part of the [An annotated dataset of Egyptian fruit bat vocalizations across varying contexts and during vocal ontogeny](https://www.nature.com/articles/sdata2017143) paper. The full dataset is available for download [here](https://figshare.com/collections/An_annotated_dataset_of_Egyptian_fruit_bat_vocalizations_across_varying_contexts_and_during_vocal_ontogeny/3666502) (on top of the labeled portion we provide, it also contains over 200 000 of unnanotated recordings).
+
+#### Citations
+
+[Prat, Yosef; Taub, Mor; Pratt, Ester; Yovel, Yossi (2017): An annotated dataset of Egyptian fruit bat vocalizations across varying contexts and during vocal ontogeny. figshare. Collection.](https://doi.org/10.6084/m9.figshare.c.3666502.v2)
