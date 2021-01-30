@@ -10,11 +10,9 @@ Egyptian fruit bats live in colonies of dozens to thousands and may live to the 
 
 ## Dataset information
 
-We provide two datasets - the Egyptian fruit bat dataset, and its mini counterpart.
+We provide two datasets - the Egyptian fruit bat dataset (91 080 recordings, unbalanced classes, 55GB), and its mini counterpart (20 000 recordings, 1 000 recordings per class, 9.1GB).
 
-### The Egyptian fruit bat dataset
-
-The dataset contains 91080 egyptian fruit bat vocalizations recorded at 250 000 Hz. Recordings range in length from 0.02 to 34 seconds. The calls are labeled and include the following information: emitter, addressee, context, emitter re-vocalization action, addressee pre-vocalization action, emitter post-vocalization action, and addressee post-vocalization action. The contains social vocalizations and represents the complete vocal repertoire used by the bats.
+Vocalizations have been recorded at 250 000 Hz. Recordings range in length from 0.02 to 34 seconds. The calls are labeled and include the following information: emitter, addressee, context, emitter re-vocalization action, addressee pre-vocalization action, emitter post-vocalization action, and addressee post-vocalization action. The contains social vocalizations and represents the complete vocal repertoire used by the bats.
 
 The preprocessed dataset can be downloaded from [Internet Archive](https://archive.org/details/egyptian_fruit_bats). Here are the steps we took to preprocess the dataset. Here are the download instructions.
 
