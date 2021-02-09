@@ -22,7 +22,7 @@ The zip file for this dataset is 44GB.
 
 This is a smaller, cleaner version of the dataset above. It consists of only labels assigned with high confidence and centers on emitters. It included 1000 calls per emitter.
 
-The dataset can be found on Internet Archive [here](https://archive.org/details/egyptian_fruit_bats_mini).
+The dataset can be found on Internet Archive [here](https://archive.org/details/egyptian_fruit_bats_10k).
 
 ### Original, unprocessed dataset
 
